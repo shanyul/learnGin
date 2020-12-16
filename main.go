@@ -1,15 +1,30 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
+	"fmt"
+	"learngo/pkg/setting"
+	"net/http"
+	"learngo/routers"
+
 )
 
 func main() {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
+	/* router := gin.Default()
+	router.GET("/test", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"Message": "pong",
+			"message": "test",
 		})
-	})
-	r.Run()
+	}) */
+
+	router := routers.InitRouter()
+
+	s := &http.Server{
+		Addr:           fmt.Sprintf(":%d", setting.HTTPPort),
+        Handler:        router,
+        ReadTimeout:    setting.ReadTimeout,
+        WriteTimeout:   setting.WaitTimeout,
+        MaxHeaderBytes: 1 << 20, // 1M
+	}
+
+	s.ListenAndServe()
 }

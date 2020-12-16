@@ -3,25 +3,31 @@ module learngo
 go 1.15
 
 require (
-	github.com/Bowery/prompt v0.0.0-20190916142128-fa8279994f75 // indirect
-	github.com/dchest/safefile v0.0.0-20151022103144-855e8d98f185 // indirect
-	github.com/gin-gonic/gin v1.6.3 // indirect
+	github.com/denisenkom/go-mssqldb v0.9.0 // indirect
+	github.com/gin-gonic/gin v1.6.3
 	github.com/go-playground/validator/v10 v10.4.1 // indirect
 	github.com/golang/protobuf v1.4.3 // indirect
-	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510 // indirect
-	github.com/gorilla/websocket v1.4.2 // indirect
+	github.com/google/go-cmp v0.5.4 // indirect
+	github.com/gopherjs/gopherjs v0.0.0-20200217142428-fce0ec30dd00 // indirect
+	github.com/jinzhu/gorm v1.9.16
 	github.com/json-iterator/go v1.1.10 // indirect
-	github.com/kardianos/govendor v1.0.9 // indirect
+	github.com/kr/text v0.2.0 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
+	github.com/lib/pq v1.9.0 // indirect
+	github.com/mattn/go-sqlite3 v1.14.5 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
-	github.com/pkg/errors v0.9.1 // indirect
+	github.com/smartystreets/assertions v1.2.0 // indirect
+	github.com/smartystreets/goconvey v1.6.4 // indirect
 	github.com/ugorji/go v1.2.1 // indirect
+	github.com/unknwon/com v1.0.1
 	golang.org/x/crypto v0.0.0-20201208171446-5f87f3452ae9 // indirect
-	golang.org/x/net v0.0.0-20201207224615-747e23833adb
-	golang.org/x/sys v0.0.0-20201211090839-8ad439b19e0f // indirect
-	golang.org/x/tools v0.0.0-20201211185031-d93e913c1a58 // indirect
+	golang.org/x/sys v0.0.0-20201214210602-f9fddec55a1e // indirect
+	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	google.golang.org/protobuf v1.25.0 // indirect
-	gopkg.in/ini.v1 v1.62.0 // indirect
+	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
+	gopkg.in/ini.v1 v1.62.0
 	gopkg.in/yaml.v2 v2.4.0 // indirect
+	gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776 // indirect
+	gorm.io/gorm v1.20.8
 )
