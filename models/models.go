@@ -2,6 +2,7 @@ package models
 
 import (
 	"fmt"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"learngo/pkg/setting"
 	"log"
 
