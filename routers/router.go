@@ -29,7 +29,7 @@ func InitRouter() *gin.Engine {
 		apiv1.DELETE("/tags/:id", v1.DeleteTag)
 
 		// 获取文章列表
-		apiv1.GET("/tags", v1.GetArticles)
+		apiv1.GET("/articles", v1.GetArticles)
 		//获取指定文章
 		apiv1.GET("/articles/:id", v1.GetArticle)
 		//新建文章
