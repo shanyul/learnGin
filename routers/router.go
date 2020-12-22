@@ -2,6 +2,8 @@ package routers
 
 import (
 	"learngo/pkg/setting"
+	"learngo/routers/api"
+	"learngo/middleware/jwt"
 	v1 "learngo/routers/api/v1"
 
 	"github.com/gin-gonic/gin"
@@ -17,7 +19,12 @@ func InitRouter() *gin.Engine {
 
 	gin.SetMode(setting.RunMode)
 
+	// 获取 token
+	r.GET("/auth", api.GetAuth)
+
 	apiv1 := r.Group("api/v1")
+	// 使用中间件
+	apiv1.Use(jwt.JWT())
 	{
 		// 获取标签列表
 		apiv1.GET("/tags", v1.GetTags)
