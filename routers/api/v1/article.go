@@ -3,6 +3,7 @@ package v1
 import (
 	"learngo/models"
 	"learngo/pkg/e"
+	"learngo/pkg/logging"
 	"learngo/pkg/setting"
 	"learngo/pkg/util"
 	"learngo/requests/validation"
@@ -103,6 +104,10 @@ func AddArticle(c *gin.Context) {
 		} else {
 			code = e.ERROR_NOT_EXIST_TAG
 		}
+	}else{
+		for key, val := range errors {
+            logging.Info(key, val)
+        }
 	}
 
 	c.JSON(http.StatusOK, gin.H{
