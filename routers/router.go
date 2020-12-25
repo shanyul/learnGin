@@ -23,6 +23,8 @@ func InitRouter() *gin.Engine {
 	r.GET("/auth", api.GetAuth)
 
 	apiv1 := r.Group("api/v1")
+
+	// docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -v /d/softTools/docker-mysql:/var/lib/mysql -d mysql
 	// 使用中间件
 	apiv1.Use(jwt.JWT())
 	{
